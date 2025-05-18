@@ -38,7 +38,7 @@
       flex-direction: column;
       gap: 15px;
     }
-    a.button-link, button.enter {
+    a.button-link {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,6 +49,7 @@
       border: none;
       cursor: pointer;
       transition: background-color 0.3s;
+      text-decoration: none;
     }
     .download {
       background-color: #3b82f6;
@@ -64,16 +65,6 @@
     .enter:hover {
       background-color: #059669;
     }
-    #iframeContainer {
-      display: none;
-      width: 100vw;
-      height: 100vh;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -83,17 +74,9 @@
     <a href="https://github.com/thefireomar/coursetrackerchef/raw/main/QIYAS.csv" class="button-link download" download>
       <i class="fas fa-download" style="margin-right: 8px;"></i> Download
     </a>
-    <button>
-          <a href="https://coursetracker.vercel.app/"> Enter the Page
-    </button>
+    <a href="https://coursetracker.vercel.app/" class="button-link enter">
+      Enter the Page
+    </a>
   </div>
-  <script>
-    function enterPage() {
-      document.querySelector('h1').style.display = 'none';
-      document.querySelector('p').style.display = 'none';
-      document.querySelector('.buttons').style.display = 'none';
-      document.getElementById('iframeContainer').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
